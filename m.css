@@ -1,0 +1,86 @@
+.banner{
+    right:0;
+    top:100%;
+    transform: translateY(-100%);
+    width:100%;    
+}
+.banner ul{
+    display: flex;
+}
+.banner li:nth-child(1),
+.banner li:nth-child(2),
+.banner li:nth-child(3) {
+    flex:1 1 33.33%;
+    height: 50px;
+    position: relative;
+    border:0;
+}
+.banner li::before{
+    content:'';
+    position: absolute;
+    z-index: 2;
+    right:0;
+    top:50%;
+    transform: translateY(-50%);
+    width:1px;
+    height: 15px;
+    background-color: white;
+}
+.banner img{
+    display: inline;
+    vertical-align: middle;
+}
+.banner li:nth-child(3)::before{
+    width:0;
+}
+.banner a{
+    line-height: 50px;
+}
+.banner li a:nth-child(2){display: none;}
+.banner li:last-child{
+    display: none;
+}
+
+.header .gnb1{
+    display: none;
+}
+.header .gnb2{
+    position: fixed;
+    left:-100%;
+    transition: all 0.5s;
+    top:0;
+    flex-direction: column;
+    width:50%;
+    height: 70%;
+}
+.header .gnb2 li{
+    width:100%;
+    flex: 1 1 33.33%;
+    line-height: 7rem;
+    background-color: rgba(0,0,0,0.5);
+}
+.header .logo{
+    margin: auto;
+}
+.header .nav{
+    bottom:0;
+}
+
+.nav svg{
+    display: block;
+    top:50%;
+}
+.bbs .counsel{
+    flex:1 1 100%;
+}
+
+.bbs .notice{
+    flex:1 1 100%;
+    margin-top:40px;
+}
+.footer .section{
+    flex: 1 1 100%;
+}
+.footer .aside{
+    flex:1 1 100%;
+}

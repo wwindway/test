@@ -1,0 +1,335 @@
+*{
+    margin:0;
+    padding: 0;
+}
+
+ul{
+    list-style: none;
+}
+a:link, a:visited{
+    text-decoration: none;
+    color:#333;
+}
+.header{
+    width:100%;
+    height: 300px;
+   background: url(./img/mainslide01.jpg) top/cover;
+}
+.header .wrap{ 
+    width:100%;
+    height: 60px;
+    background: rgba(0,0,0,0.5);
+}
+.header .title1{
+    max-width:668px;
+    width:100%;
+    height: 130px;
+    background: url(./img/img_slidecontents01.png) no-repeat;
+    background-size: contain;
+    margin:10px auto;
+}
+.header .title2{
+    max-width:668px;
+    width:100%;
+    height: 60px;
+    margin: auto;
+}
+.title2 p{
+    text-transform: uppercase;
+    color:white;
+    font:bold 20px sans-serif;
+    text-align: center;
+}
+.title2 ul{
+    display: flex;
+    width:20%;
+    margin:7px auto;
+}
+.title2 li{
+    flex-grow: 1;
+}
+.header .nav{
+    width:100%;
+    max-width: 1200px;
+    margin: auto;
+    height: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    position: relative;
+    align-items: flex-end;
+    bottom: 10px;
+    justify-content: space-between;
+    /* align-content: center; */
+}
+.nav svg{
+    position: absolute;
+    z-index:10;
+    left:0;
+    top:calc(50% + 10px);
+    width:30px;
+    fill:white;
+    transform: translateY(-50%);
+    display: none;
+}
+.nav .logo{
+    width:254px;
+    height: 32px;
+    background:url(./img/logo.png) no-repeat;
+    background-size: 254px 32px;
+}
+.nav .gnb1{
+    position: absolute;
+    right:0;
+    width:12%;
+    top:14px;
+    height: auto;
+    z-index: 2;
+    display: flex;
+}
+.gnb1 li{
+    flex:1 1 50%;
+    text-align: center;
+    font:normal 12px sans-serif; 
+    position: relative;
+}
+.gnb1 a{color:white;}
+.gnb1 li:first-child::before{
+    position: absolute;
+    content: '';
+    width:1px;
+    background-color: white;
+    height: 10px;
+    z-index: 2;
+    right:2px;
+    top:4px;    
+}
+.nav .gnb2{
+    width:40%;
+    display: flex;
+}
+.gnb2 li{
+    flex:1 1 25%;
+    text-align: center;
+    font:400 17px sans-serif;
+}
+.gnb2 a{color:white;}
+
+.banner{
+    position: fixed;
+    z-index: 30;
+    right:0;
+    top:150px;
+    width:120px;
+}
+.banner ul{
+    width:100%;
+}
+.banner img{
+    display: none;
+}
+.banner li:nth-child(1),.banner li:nth-child(2){
+    width:100%;
+    height: 70px;
+    text-align: center;
+    background-color: #282828;
+    border-bottom: 1px solid white;
+}
+.banner li:nth-child(3){
+    width:100%;
+    height: 30px;
+    background-color: #282828;
+    text-align: center;
+}
+.banner li:last-child{
+    width:100%;
+    background-color: white;
+    border-left:1px solid #282828;
+    border-bottom: 1px solid #282828;
+}
+.banner li:last-child a{
+    color:#282828;
+    text-align: center;
+    font:bold 16px/50px sans-serif;
+    position: relative;
+    text-transform: uppercase;
+}
+.banner li:last-child a::before{
+    content: '▲';
+    position: absolute;
+    top:-15px;
+    left:50%;
+    transform: translateX(-50%);
+}
+.banner a{
+    color:white;
+    display: block;
+    /* line-height: 30px; */
+    font:normal 13px/30px sans-serif;
+}
+
+.main{
+    width:100%;
+
+}
+.main h3{
+    width:100%;
+    max-width: 768px;
+    text-align: center;
+    margin: auto;
+    margin-top:30px;
+    margin-bottom: 30px;
+    font:bold 25px/70px '돋음';
+}
+.main .wrap{
+    width:100%;
+    max-width:1200px;
+    margin: auto;
+}
+.main .wrap ul{
+    width:100%;
+    display: flex;
+    flex-wrap: wrap;
+}
+.main .wrap li{
+    flex:1 1 33.33%;
+}
+.main .wrap li p:nth-child(1){
+    width:100%;
+    text-align: center;
+}
+.main .wrap li p:nth-child(2){
+    width:100%;
+    text-align: center;
+    font:bold 19px/30px sans-serif;
+}
+.main .wrap li p:nth-child(3){
+    width: 90%;
+    margin: auto;
+    text-align: center;
+    line-height: 20px;
+}
+.main .wrap li p:nth-child(4){
+    text-align: center;
+    text-transform: uppercase;
+    font:bold 19px/20px sans-serif;
+    margin-top:20px;
+    margin-bottom: 20px;
+    position: relative;
+}
+
+.main .wrap li p:nth-child(4)::before{
+    content:'';
+    width: 50px;
+    height: 1px;
+    position: absolute;
+    z-index:10;
+    top:-5px;
+    background-color: black;
+}
+.main .bg{
+    position: absolute;
+    width:100%;
+    height: 400px;
+    bottom:-150px;
+    left:0;
+    background-color: #F4F0E9;
+    z-index:-1;
+}
+
+.bbs{
+    max-width:1200px;
+    width:100%;
+    margin:40px auto;
+    display: flex;
+    flex-wrap: wrap;
+}
+.bbs .counsel{
+    flex:1 1 60%;
+    height: 150px;
+    background: url(./img/bg_app.jpg) top/cover;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+.bbs .counsel p:nth-child(1){
+    flex:0 1 40%;
+    height: 60px;
+    border:1px solid white;
+    color:white;
+    text-align: center;
+    line-height: 60px;
+}
+.bbs .counsel p:nth-child(2){
+    flex:0 1 40%;
+    height: 60px;
+    border:1px solid white;
+    color:white;
+    text-align: center;
+    line-height: 60px;
+}
+.bbs .counsel img{
+    vertical-align: middle;
+}
+.bbs .notice{
+    flex:1 1 40%;
+}
+.bbs .notice ul{
+    width:95%;
+    margin-left:5%;
+    list-style: disc;
+}
+.bbs .notice li{
+    width:100%;
+    line-height: 25px;
+}
+.bbs .notice li:first-child{
+    text-transform: uppercase;
+    font:bold 16px sans-serif;
+    list-style: none;
+}
+
+.footer{
+    width:100%;
+    border-top:1px solid #eee;
+    margin-top:60px;
+}
+.footer .wrap{
+    max-width:1200px;
+    margin: auto;
+    width:100%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+.footer .section{
+    flex:0 1 50%;
+}
+.footer .section p{
+    line-height: 30px;
+}
+.footer .txt{
+    display: flex;
+}
+.footer .txt p{
+    flex:0 1 26%;
+    font:bold 16px/30px sans-serif;
+    margin: 1%;
+    position: relative;
+}
+.footer .txt p:nth-child(1):before{
+    content:'';
+    position: absolute;
+    right:20%;
+    top:7px;
+    width:1px;
+    height: 15px;
+    background-color: #282828;
+}
+.footer .aside{
+    flex:0 1 40%;
+    text-align: center;
+}
+.footer .aside img{
+    margin:2%;
+    margin-top: 7%;
+}
